@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'nlicons';
-    src: url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm/fonts/nlicons/nlicons.eot');
-    src: url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm/fonts/nlicons/nlicons.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm/fonts/nlicons/nlicons.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm/fonts/nlicons/nlicons.ttf') format('truetype'),
-        url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm/fonts/nlicons/nlicons.svg#nlicons') format('svg');
+    src: url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm@latest/fonts/nlicons/nlicons.eot');
+    src: url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm@latest/fonts/nlicons/nlicons.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm@latest/fonts/nlicons/nlicons.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm@latest/fonts/nlicons/nlicons.ttf') format('truetype'),
+        url('https://cdn.jsdelivr.net/gh/egfx/NaturalLanguageForm@latest/fonts/nlicons/nlicons.svg#nlicons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
