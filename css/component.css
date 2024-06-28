@@ -10,23 +10,23 @@
 }
 
 /* general style for the form */
-.nl-form {
+.nl-container .nl-form {
     width: 100%;
     margin: 0.3em auto 0 auto;
     font-size: 4em;
     line-height: 1.5;
 }
 
-.nl-form ul {
+.nl-container .nl-form ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 /* normalize the input elements, make them look like everything else */
-.nl-form input,
-.nl-form select,
-.nl-form button {
+.nl-container .nl-form input,
+.nl-container .nl-form select,
+.nl-container .nl-form button {
     border: none;
     background: transparent;
     font-family: inherit;
@@ -41,24 +41,24 @@
     -moz-appearance: none;
 }
 
-.nl-form input:focus {
+.nl-container .nl-form input:focus {
     outline: none;
 }
 
 /* custom field (drop-down, text element) styling  */
-.nl-field {
+.nl-container .nl-field {
     display: inline-block;
     position: relative;
 }
 
-.nl-field.nl-field-open {
+.nl-container .nl-field.nl-field-open {
     z-index: 10000;
 }
 
 /* the toggle is the visible part in the form */
-.nl-field-toggle,
-.nl-form input,
-.nl-form select  {
+.nl-container .nl-field-toggle,
+.nl-container .nl-form input,
+.nl-container .nl-form select  {
     line-height: inherit;
     display: inline-block;
     color: #b14943;
@@ -67,7 +67,7 @@
 }
 
 /* drop-down list / text element */
-.nl-field ul {
+.nl-container .nl-field ul {
     position: absolute;
     visibility: hidden;
     background: #76C3BD;
@@ -83,7 +83,7 @@
     transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field.nl-field-open ul {
+.nl-container .nl-field.nl-field-open ul {
     visibility: visible;
     opacity: 1;
     -webkit-transform: translateY(-50%) scale(1);
@@ -94,33 +94,33 @@
     transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field ul li {
+.nl-container .nl-field ul li {
     color: #fff;
     position: relative;
 }
 
-.nl-dd ul li {
+.nl-container .nl-dd ul li {
     padding: 0 1.5em 0 0.5em;
     cursor: pointer;
     white-space: nowrap;
 }
 
-.nl-dd ul li.nl-dd-checked {
+.nl-container .nl-dd ul li.nl-dd-checked {
     color: #478982;
 }
 
-.no-touch .nl-dd ul li:hover {
+.nl-container .no-touch .nl-dd ul li:hover {
     background: rgba(0,0,0,0.05);
 }
 
-.no-touch .nl-dd ul li:hover:active {
+.nl-container .no-touch .nl-dd ul li:hover:active {
     color: #478982;
 }
 
 /* icons for some elements */
-.nl-dd ul li.nl-dd-checked:before,
-.nl-submit:before,
-.nl-field-go:before {
+.nl-container .nl-dd ul li.nl-dd-checked:before,
+.nl-container .nl-submit:before,
+.nl-container .nl-field-go:before {
     font-family: 'nlicons';
     speak: none;
     font-style: normal;
@@ -130,7 +130,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.nl-dd ul li.nl-dd-checked:before {
+.nl-container .nl-dd ul li.nl-dd-checked:before {
     content: "\e000";
     position: absolute;
     right: 1em;
@@ -138,18 +138,18 @@
     line-height: 3;
 }
 
-.nl-ti-text ul {
+.nl-container .nl-ti-text ul {
     min-width: 8em;
 }
 
-.nl-ti-text ul li.nl-ti-input input {
+.nl-container .nl-ti-text ul li.nl-ti-input input {
     width: 100%;
     padding: 0.2em 2em 0.2em 0.5em;
     border-bottom: none;
     color: #fff;
 }
 
-.nl-form .nl-field-go {
+.nl-container .nl-form .nl-field-go {
     position: absolute;
     right: 0;
     top: 0;
@@ -161,7 +161,7 @@
     color: transparent;
 }
 
-.nl-field-go:before {
+.nl-container .nl-field-go:before {
     content: "\e001";
     font-size: 75%;
     color: #fff;
@@ -171,35 +171,35 @@
 }
 
 /* custom placeholder color */
-input::-webkit-input-placeholder {
+.nl-container input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.8);
 }
 
-input:active::-webkit-input-placeholder ,
-input:focus::-webkit-input-placeholder {
+.nl-container input:active::-webkit-input-placeholder ,
+.nl-container input:focus::-webkit-input-placeholder {
     color: rgba(255,255,255,0.2);
 }
 
-input::-moz-placeholder {
+.nl-container input::-moz-placeholder {
     color: rgba(255,255,255,0.8);
 }
 
-input:active::-moz-placeholder,
-input:focus::-moz-placeholder {
+.nl-container input:active::-moz-placeholder,
+.nl-container input:focus::-moz-placeholder {
     color: rgba(255,255,255,0.2);
 }
 
-input:-ms-input-placeholder {  
+.nl-container input:-ms-input-placeholder {  
     color: rgba(255,255,255,0.8);
 }
 
-input:active::-ms-input-placeholder ,
-input:focus::-ms-input-placeholder {
+.nl-container input:active::-ms-input-placeholder ,
+.nl-container input:focus::-ms-input-placeholder {
     color: rgba(255,255,255,0.2);
 }
 
 /* example field below text input */
-.nl-ti-text ul li.nl-ti-example {
+.nl-container .nl-ti-text ul li.nl-ti-example {
     font-size: 40%;
     font-style: italic;
     font-weight: 400;
@@ -208,16 +208,16 @@ input:focus::-ms-input-placeholder {
     border-top: 1px dashed rgba(255,255,255,0.7);
 }
 
-.nl-ti-text ul li.nl-ti-example em {
+.nl-container .nl-ti-text ul li.nl-ti-example em {
     color: #fff
 }
 
 /* submit button */
-.nl-submit-wrap {
+.nl-container .nl-submit-wrap {
     margin-top: 0.4em;
 }
 
-.nl-form .nl-submit {
+.nl-container .nl-form .nl-submit {
     line-height: 3;
     text-transform: uppercase;
     cursor: pointer;
@@ -230,7 +230,7 @@ input:focus::-ms-input-placeholder {
     letter-spacing: 3px;
 }
 
-.nl-submit:before {
+.nl-container .nl-submit:before {
     content: "\e001";
     color: #fff;
     float: left;
@@ -239,17 +239,17 @@ input:focus::-ms-input-placeholder {
     background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover,
-.no-touch .nl-form .nl-submit:active {
+.nl-container .no-touch .nl-form .nl-submit:hover,
+.nl-container .no-touch .nl-form .nl-submit:active {
     background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover:before {
+.nl-container .no-touch .nl-form .nl-submit:hover:before {
     background: #58a199;
 }
 
 /* overlay becomes visible when a field is opened */
-.nl-overlay {
+.nl-container .nl-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -264,7 +264,7 @@ input:focus::-ms-input-placeholder {
     transition: visibility 0s 0.3s, opacity 0.3s;
 }
 
-.nl-field.nl-field-open ~ .nl-overlay {
+.nl-container .nl-field.nl-field-open ~ .nl-overlay {
     opacity: 1;
     visibility: visible;
     -webkit-transition-delay: 0s;
@@ -273,26 +273,26 @@ input:focus::-ms-input-placeholder {
 }
 
 @media screen and (max-width: 45em) {
-    .nl-form {
+    .nl-container .nl-form {
         font-size: 3em;
     }
 }
 
 @media screen and (max-width: 25em) {
-    .nl-form {
+    .nl-container .nl-form {
         font-size: 2em;
     }
 }
 
 /* Additional styles for SweetAlert modal */
-.swal-nl-form {
+.nl-container .swal-nl-form {
     padding: 20px;
     max-width: 100%;
     box-sizing: border-box;
 }
 
-.swal-nl-form select,
-.swal-nl-form input[type="text"] {
+.nl-container .swal-nl-form select,
+.nl-container .swal-nl-form input[type="text"] {
     width: auto;
     max-width: 100%;
     border: none;
@@ -311,16 +311,16 @@ input:focus::-ms-input-placeholder {
     cursor: pointer;
 }
 
-.swal-nl-form select:focus,
-.swal-nl-form input[type="text"]:focus {
+.nl-container .swal-nl-form select:focus,
+.nl-container .swal-nl-form input[type="text"]:focus {
     outline: none;
 }
 
-.swal-nl-form .nl-submit-wrap {
+.nl-container .swal-nl-form .nl-submit-wrap {
     text-align: center;
 }
 
-.swal-nl-form .nl-submit {
+.nl-container .swal-nl-form .nl-submit {
     background: #4CAF50;
     color: white;
     border: none;
@@ -329,26 +329,26 @@ input:focus::-ms-input-placeholder {
     font-size: 16px;
 }
 
-.swal-nl-form .nl-submit:hover {
+.nl-container .swal-nl-form .nl-submit:hover {
     background: #45a049;
 }
 
-.swal-nl-form .nl-overlay {
+.nl-container .swal-nl-form .nl-overlay {
     display: none;
 }
 
-.swal2-modal .swal2-html-container {
+.nl-container .swal2-modal .swal2-html-container {
     text-align: left;
 }
 
-.swal-nl-form select,
-.swal-nl-form input {
+.nl-container .swal-nl-form select,
+.nl-container .swal-nl-form input {
     margin: 5px 0;
     padding: 5px;
     font-size: 14px;
 }
 
-.swal-nl-form {
+.nl-container .swal-nl-form {
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -357,8 +357,8 @@ input:focus::-ms-input-placeholder {
     margin: 0 auto;
 }
 
-.swal-nl-form select,
-.swal-nl-form input[type="text"] {
+.nl-container .swal-nl-form select,
+.nl-container .swal-nl-form input[type="text"] {
     display: inline-block;
     width: auto;
     max-width: calc(100% - 10px);
@@ -370,12 +370,12 @@ input:focus::-ms-input-placeholder {
     box-sizing: border-box;
 }
 
-.swal-nl-form .nl-submit-wrap {
+.nl-container .swal-nl-form .nl-submit-wrap {
     margin-top: 20px;
     text-align: center;
 }
 
-.swal-nl-form .nl-submit {
+.nl-container .swal-nl-form .nl-submit {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -385,6 +385,6 @@ input:focus::-ms-input-placeholder {
     border-radius: 4px;
 }
 
-.swal-nl-form .nl-submit:hover {
+.nl-container .swal-nl-form .nl-submit:hover {
     background-color: #45a049;
 }
